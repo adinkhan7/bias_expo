@@ -1,6 +1,6 @@
 ---
 
-# biascheck
+# bias_expo
 
 **Author:** Adin Khan
 
@@ -8,7 +8,7 @@
 
 ### Overview
 
-`biascheck` is a Stata utility designed to automate the detection of enumerator bias during field surveys. It takes a categorical variable (e.g., a Likert scale or a 'Yes/No' question) and generates a proportion-based balance table, exporting it directly to a formatted Excel sheet.
+`bias_expo` is a Stata utility designed to automate the detection of enumerator bias during field surveys. It takes a categorical variable (e.g., a Likert scale or a 'Yes/No' question) and generates a proportion-based balance table, exporting it directly to a formatted Excel sheet.
 
 ### Key Features
 
@@ -22,12 +22,12 @@
 ### Syntax
 
 ```stata
-biaschec varname, by(groupvar) saving("filename.xlsx") sheet("sheetname")
+bias_expo varname, by(groupvar) saving("filename.xlsx") sheet("sheetname")
 
 Example:
-biascheck q9a,  by(enum) saving("q9a_bias.xlsx")  sheet("q9a")
+bias_expo q9a,  by(enum) saving("q9a_bias.xlsx")  sheet("q9a")
 
-For Multiple variables:
+For Several variables:
 
 local vars (varname)
 local excel_file "Bias_Check_Report_`c(current_date)'.xlsx"
@@ -36,7 +36,7 @@ foreach v of local vars {
     di "System: Exporting biascheck for `v'..."
     
     * This runs the check and saves it to a sheet named after the variable
-    biascheck_to_excel `v', by(varname) saving("`excel_file'") sheet("`v'")
+    bias_expo `v', by(varname) saving("`excel_file'") sheet("`v'")
 }
 
 
@@ -48,7 +48,7 @@ foreach v of local vars {
     di "System: Exporting biascheck for `v'..."
     
     * This runs the check and saves it to a sheet named after the variable
-    biascheck `v', by(enum_lab) saving("`excel_file'") sheet("`v'")
+    bias_expo `v', by(enum_lab) saving("`excel_file'") sheet("`v'")
 }
 
 
