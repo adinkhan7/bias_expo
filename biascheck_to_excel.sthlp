@@ -1,6 +1,6 @@
 ---
 
-# biascheck_to_excel
+# biascheck
 
 **Author:** Adin Khan
 
@@ -8,7 +8,7 @@
 
 ### Overview
 
-`biascheck_to_excel` is a Stata utility designed to automate the detection of enumerator bias during field surveys. It takes a categorical variable (e.g., a Likert scale or a 'Yes/No' question) and generates a proportion-based balance table, exporting it directly to a formatted Excel sheet.
+`biascheck` is a Stata utility designed to automate the detection of enumerator bias during field surveys. It takes a categorical variable (e.g., a Likert scale or a 'Yes/No' question) and generates a proportion-based balance table, exporting it directly to a formatted Excel sheet.
 
 ### Key Features
 
@@ -22,10 +22,10 @@
 ### Syntax
 
 ```stata
-biascheck_to_excel varname, by(groupvar) saving("filename.xlsx") sheet("sheetname")
+biaschec varname, by(groupvar) saving("filename.xlsx") sheet("sheetname")
 
 Example:
-biascheck_to_excel q9a,  by(enum) saving("q9a_bias.xlsx")  sheet("q9a")
+biascheck q9a,  by(enum) saving("q9a_bias.xlsx")  sheet("q9a")
 
 For Multiple variables:
 
@@ -48,7 +48,7 @@ foreach v of local vars {
     di "System: Exporting biascheck for `v'..."
     
     * This runs the check and saves it to a sheet named after the variable
-    biascheck_to_excel `v', by(enum_lab) saving("`excel_file'") sheet("`v'")
+    biascheck `v', by(enum_lab) saving("`excel_file'") sheet("`v'")
 }
 
 
