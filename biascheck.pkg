@@ -1,8 +1,6 @@
 v 1.1.0
 d biascheck: Enumerator bias summary to formatted Excel export
-<<<<<<< HEAD
 f biascheck.ado
-=======
 f biascheck.ado
 f biascheck.sthlp
->>>>>>> e5a512b4082eabf86efc9efc9d7846f8c21c9b8a
+
