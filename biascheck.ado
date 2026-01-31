@@ -58,4 +58,8 @@ program define biascheck
             sheet("`sheet'") sheetreplace firstrow(varlabels)
             
     restore
+<<<<<<< HEAD
 end
+=======
+end
+>>>>>>> e5a512b4082eabf86efc9efc9d7846f8c21c9b8a

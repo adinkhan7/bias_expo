@@ -91,4 +91,9 @@ biascheck_to_excel q9a, by(enum_name) saving("`excel_file'") sheet("q9a_check")
 
 1. **Repeatable:** Running this in a loop for 50 variables takes seconds; manual copy-pasting takes hours.
 2. **Deterministic:** Eliminates human error in transferring numbers from the Stata results window to Excel.
+<<<<<<< HEAD
 3. **Label Retention:** Unlike standard Stata export commands, this preserves the descriptive text of your survey options.
+=======
+3. **Label Retention:** Unlike standard Stata export commands, this preserves the descriptive text of your survey options.
+
+>>>>>>> e5a512b4082eabf86efc9efc9d7846f8c21c9b8a
