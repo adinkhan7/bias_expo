@@ -1,14 +1,3 @@
-	
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
 *! version 1.1.0 Adin Khan 31jan2026
 capture program drop biascheck
 program define biascheck
@@ -69,7 +58,6 @@ program define biascheck
             sheet("`sheet'") sheetreplace firstrow(varlabels)
             
     restore
+
 end
-		
-		
 
