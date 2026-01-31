@@ -57,6 +57,10 @@ biascheck_to_excel q9a, by(enum_name) saving("`excel_file'") sheet("q9a_check")
 * Stata 17 or higher.
 * A variable named `consent` (1 = Consented, 0 = Not) must exist in the dataset to calculate the success counts.
 
+
+Example:
+biascheck_to_excel q9a,  by(enum) saving("q9a_bias.xlsx")  sheet("q9a")
+
 ---
 
 ### Why this is better than manual `tabstat`
