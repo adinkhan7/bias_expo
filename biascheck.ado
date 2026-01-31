@@ -1,6 +1,6 @@
 *! version 1.1.0 Adin Khan 31jan2026
-capture program drop biascheck_to_excel
-program define biascheck_to_excel
+capture program drop biascheck
+program define biascheck
     version 17
     syntax varname, BY(varname) SAVING(string) SHEET(string)
     
