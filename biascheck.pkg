@@ -1,0 +1,3 @@
+v 1.1.0
+d biascheck: Enumerator bias summary to formatted Excel export
+f biascheck.ado
