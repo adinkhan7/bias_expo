@@ -27,6 +27,31 @@ biascheck_to_excel varname, by(groupvar) saving("filename.xlsx") sheet("sheetnam
 Example:
 biascheck_to_excel q9a,  by(enum) saving("q9a_bias.xlsx")  sheet("q9a")
 
+For Multiple variables:
+
+local vars (varname)
+local excel_file "Bias_Check_Report_`c(current_date)'.xlsx"
+
+foreach v of local vars {
+    di "System: Exporting biascheck for `v'..."
+    
+    * This runs the check and saves it to a sheet named after the variable
+    biascheck_to_excel `v', by(varname) saving("`excel_file'") sheet("`v'")
+}
+
+
+Example:
+local vars q8a_old q8b_old q8c_old q8d q9a q9b q10a q10b town_hall_decision signup involvement
+local excel_file "Bias_Check_Report_`c(current_date)'.xlsx"
+
+foreach v of local vars {
+    di "System: Exporting biascheck for `v'..."
+    
+    * This runs the check and saves it to a sheet named after the variable
+    biascheck_to_excel `v', by(enum_lab) saving("`excel_file'") sheet("`v'")
+}
+
+
 ```
 
 * `varname`: The categorical variable you want to check for bias (e.g., `q10_satisfaction`).
