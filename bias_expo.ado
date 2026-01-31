@@ -1,6 +1,6 @@
 *! version 1.1.0 Adin Khan 31jan2026
-capture program drop biascheck
-program define biascheck
+capture program drop bias_expo
+program define bias_expo
     version 17
     syntax varname, BY(varname) SAVING(string) SHEET(string)
     
