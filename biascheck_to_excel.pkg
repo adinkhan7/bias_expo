@@ -1,4 +1,0 @@
-v 1.1.0
-d biascheck_to_excel: Enumerator bias summary to formatted Excel export
-f biascheck_to_excel.ado
-f biascheck_to_excel.sthlp
